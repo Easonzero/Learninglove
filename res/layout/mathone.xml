@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/math"
+    android:gravity="bottom" >
+
+    <TableRow
+        android:id="@+id/TableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+		<RadioGroup
+		    android1:id="@+id/radiogroup2"
+		    android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="A"
+            android:textColor="#EEE8AA" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:checked="false"
+            android:textColor="#EEE8AA" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:checked="false"
+            android:textColor="#EEE8AA" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:checked="false"
+            android:textColor="#EEE8AA" />
+        </RadioGroup>
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="192dp"
+        android1:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/math1" />
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/analogClock1"
+        android:layout_centerHorizontal="true"
+        android:text="DigitalClock"
+        android:textColor="#EEE8AA" />
+
+    <RelativeLayout
+        android1:id="@+id/content"
+        android1:layout_width="match_parent"
+        android1:layout_height="match_parent"
+        android1:layout_above="@+id/TableRow1"
+        android1:layout_alignParentLeft="true" >
+
+        <SlidingDrawer
+            android1:id="@+id/slidingDrawer1"
+            android1:layout_width="match_parent"
+            android1:layout_height="match_parent"
+            android1:content="@+id/content"
+            android1:handle="@+id/handle"
+            android:allowSingleTap="true" >
+
+            <Button
+                android1:id="@+id/handle"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:background="@drawable/text"
+                android1:text="  " />
+
+            <RelativeLayout
+                android1:id="@+id/content"
+                android1:layout_width="match_parent"
+                android1:layout_height="match_parent" >
+
+                <ImageView
+                    android1:id="@+id/imageView2"
+                    android1:layout_width="match_parent"
+                    android1:layout_height="match_parent"
+                    android1:layout_alignParentBottom="true"
+                    android1:layout_alignParentRight="true"
+                    android1:layout_alignParentTop="true"
+                    android1:src="@drawable/dialog2"
+                    android:background="#20000000" />
+
+                <TextView
+                    android1:id="@+id/textView1"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+                    android1:layout_alignParentTop="true"
+                    android1:layout_centerHorizontal="true"
+                    android1:text="解析"
+                    android1:textColor="#2E8B57"
+                    android1:textSize="40sp" />
+
+            </RelativeLayout>
+        </SlidingDrawer>
+
+        <Button
+            android1:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:layout_alignParentRight="true"
+            android1:layout_alignParentTop="true"
+            android1:background="@drawable/key"
+            android1:text="  " />
+
+    </RelativeLayout>
+    
+</RelativeLayout>

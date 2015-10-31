@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relative"
+    android:background="@drawable/noteback" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="#00000000" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/noteText"
+                android:layout_width="280dp"
+                android:layout_height="700dp"
+                android:background="#00000000"
+                android:ems="17"
+                android:gravity="left|top"
+                android:textSize="20sp"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="取\n\n消"
+        android:textColor="#54FF9F"
+        android:textSize="30sp"
+        android:background="@drawable/box"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="保\n\n存"
+        android:textColor="#54FF9F"
+        android:textSize="30sp"
+        android:background="@drawable/box_0"
+        android:visibility="gone" />
+
+    <AutoCompleteTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:hint="题目君" >
+
+    </AutoCompleteTextView>
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/set"
+        android:text="  " />
+
+</RelativeLayout>

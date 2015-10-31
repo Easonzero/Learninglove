@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wangyi.learninglove"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.wangyi.learninglove.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:process=":process.main" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wangyi.notetext.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" ></activity>
+        <activity android:name="com.wangyi.notetext.ReadActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" ></activity> 
+        <activity
+            android:name="com.wangyi.screenlocker.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <service android:name="com.wangyi.screenlocker.MyLockScreenService"
+            	 android:persistent="true"
+            	 android:process=":process.sub">  
+			<intent-filter>  
+				<action android:name="android.intent.action.SCREEN_OFF" /> 
+				<action android:name="android.intent.action.SCREEN_ON" /> 
+			</intent-filter>
+		</service>
+		<activity android:name="com.wangyi.screenlocker.ELockScreen"
+                  android:label="@string/app_name"
+                  android:excludeFromRecents="true"                  
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			android:launchMode="singleInstance" >			
+            <intent-filter></intent-filter>
+        </activity>
+        <activity android:name="com.wangyi.screenlocker.MLockScreenOne"
+                  android:label="@string/app_name"
+                  android:excludeFromRecents="true"                  
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			android:launchMode="singleInstance" >			
+            <intent-filter></intent-filter>
+        </activity>
+        <activity android:name="com.wangyi.screenlocker.MLockScreenTwo"
+                  android:label="@string/app_name"
+                  android:excludeFromRecents="true"                  
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			android:launchMode="singleInstance" >			
+            <intent-filter></intent-filter>
+        </activity>
+        <activity android:name="com.wangyi.screenlocker.TLockScreen"
+                  android:label="@string/app_name"
+                  android:excludeFromRecents="true"                  
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			android:launchMode="singleInstance" >			
+            <intent-filter></intent-filter>
+        </activity >
+		<activity android:name="com.wangyi.screenlocker.TimeActivityOne"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		    android:label="@string/app_name">
+		    <intent-filter>  
+				<action android:name="android.intent.action.SCREEN_OFF" /> 
+			</intent-filter>
+		</activity>
+		<activity android:name="com.wangyi.screenlocker.TimeActivityTwo"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		    android:label="@string/app_name">
+		    
+		</activity>
+		<activity android:name="com.wangyi.screenlocker.TimeActivityTwoDate"
+		    android:theme="@android:style/Theme.Light.NoTitleBar"
+		    android:label="@string/app_name">
+		    
+		</activity>
+		<receiver android:name="com.wangyi.learninglove.DAR"
+                                android:permission="android.permission.BIND_DEVICE_ADMIN">
+
+                <meta-data android:name="android.app.device_admin"
+                       android:resource="@xml/device_admin" />
+
+                <intent-filter>
+                        <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                </intent-filter>
+       </receiver>
+       <activity
+			android:name="com.wangyi.learninglove.OnLock"
+			android:label="@string/app_name"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+           
+       </activity>
+       <receiver android:name="com.wangyi.screenlocker.TLockScreenControl" >
+           <intent-filter>  
+				<action android:name="android.intent.action.SCREEN_OFF" /> 
+			</intent-filter>
+       </receiver>
+       <activity android:name="com.wangyi.correct.CropActivity"
+           android:launchMode="singleInstance"
+           android:process=":process.sub"
+           android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+       </activity>
+       <activity android:name="com.wangyi.correct.MainActivity"
+           android:theme="@android:style/Theme.Light.NoTitleBar" ></activity>
+       <activity android:name="com.wangyi.correct.ReadActivity"
+           android:theme="@android:style/Theme.Light.NoTitleBar" ></activity>
+       <activity android:name="com.wangyi.learninglove.ViewActivity"
+           android:theme="@android:style/Theme.Light.NoTitleBar" />
+       <activity android:name="com.wangyi.notetext.NoteActivity"
+           android:theme="@android:style/Theme.Light.NoTitleBar"
+           android:windowSoftInputMode="adjustPan|stateHidden" ></activity>
+    </application>
+
+</manifest>
+

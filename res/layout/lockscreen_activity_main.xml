@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_ground_3"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/set_onoff"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        android:text="设置锁屏 [目前状态：关闭]"
+        android:textColor="#2E2E2E"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#FFFFFF"
+            android:checked="true"
+            android:state_enabled="false"
+            android:text="英语单词开机背"
+            android:textColor="#2E2E2E" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFE4E1" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#FFFFFF"
+            android:state_enabled="false"
+            android:text="少侠，开机前先做道数学题怎么样"
+            android:textColor="#2E2E2E" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFE4E1" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="#FFFFFF"
+            android:state_enabled="false"
+            android:text="学习时间不准玩手机~"
+            android:textColor="#2E2E2E" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/View01"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.43"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="#FFFFFF"
+            android:checked="true"
+            android:text="在预设时长内好好学习！不玩手机！"
+            android:textColor="#2E2E2E" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#FFFFFF"
+            android:text="在固定时间段内好好听课！不玩手机！"
+            android:textColor="#2E2E2E" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/set"
+            android:text="  "
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/View01"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_weight="0.43" >
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="#FFFFFF"
+            android:checked="true"
+            android:text="设置基本题库作为题源"
+            android:textColor="#2E2E2E" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:id="@+id/radio6"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#FFFFFF"
+            android:text="设置错题库作为题源"
+            android:textColor="#2E2E2E" />
+
+        <Button
+            android:id="@+id/button4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/set"
+            android:text="  "
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:text="  " />
+
+</LinearLayout>
